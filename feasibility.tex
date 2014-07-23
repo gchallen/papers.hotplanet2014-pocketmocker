@@ -1,0 +1,54 @@
+\section{Feasibility}
+\label{sec-feasibility}
+
+An natural question to ask about data mocking is if a system was developed
+that provided this feature, could it be deployed to a large number of users?
+We believe that the answer is yes, at least on Android smartphones. Below we
+briefly discuss two ways to mock apps.
+
+\subsection{Platform Support}
+
+One way to implement mocking is to add support to smartphone platforms. For
+example, when an app requested the device's current location from a platform
+service, the service could either return the user's real location or a mocked
+location. Given the locked-down nature of major smartphone platforms today,
+this means that mocking would require the cooperation of the companies such
+as Google, Apple, and Microsoft that maintain the dominant three smartphone
+platforms available today. Unfortunately, we expect that all smartphone
+platform providers have an interest in perpetuating the exposure of personal
+information to apps that data mocking is intended to frustrate, making them
+unwilling to implement this feature.
+
+Another option is to use an open-source platform, which would limit mocking
+to the 80\% of smartphones worldwide running
+Android~\cite{android-marketshare}. Several previous projects with similar
+goals including AppFence~\cite{droids-ccs11},
+MockDroid~\cite{mockdroid-hotmobile11}, and Android record and
+replay~\cite{recordreplay-hotmobile11} have shown the feasibility of this
+approach through platform modifications, although neither implemented mocking
+as we have described it. However, while utilizing Android would allow
+platform changes required to implement mocking to be implemented, deploying
+them to users would still be challenging. We expect that even if they are
+interesting in mocking, few users are willing or able take the steps required
+to replace the built-in software on their devices---commonly referred to as
+``rooting'' or ``jailbreaking'' the device. 
+
+There are two potential ways around this roadblock. First, mocking could be
+integrated into popular alternate Android platform distributions such as
+CyanogenMod. While this community is small, they may be disproportionately
+interested in mocking given their willingness to void their warranties and
+the intentions of smartphone device manufactures. Even a small amount of
+mocking could lead the smartphone privacy conversation in the right
+direction. Second, at some point smartphones may be required to provide more
+configurability at the platform level to support apps, similar to the way
+that desktop operating systems allow apps to install device drivers, thus
+potentially opening the door for widespread distribution of data mocking.
+
+\subsection{App Rewriting}
+
+A more promising alternative that avoids the need to modify the underlying
+smartphone platform is to utilize the ability to recover the source of
+Android APKs through decompilation. Access to the resulting source files
+would allow rewriting API calls to return mocked data, producing a mockable
+version of the original app. While decompilation has limitations, we are
+excited by this technique and actively exploring this approach.

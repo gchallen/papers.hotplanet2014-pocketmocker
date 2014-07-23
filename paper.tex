@@ -1,0 +1,59 @@
+\input{./include/start.tex}
+
+\ifdefined\isdraft
+  \usepackage{draftwatermark}
+  \SetWatermarkText{Under Submission}
+  \SetWatermarkScale{0.6}
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \renewcommand{\headrulewidth}{0pt}
+  \lhead{}
+  \chead{Under Submission to HotPlanet'14. Do not distribute.}
+  \rhead{}
+\else
+\fi
+
+\begin{document}
+\date{}
+
+\def\thetitle{Should Smartphone Users Mock Apps?}
+\title{\thetitle}
+
+\numberofauthors{1}
+\author{
+  Nick DiRienzo and Geoffrey Challen\\
+  \affaddr{Department of Computer Science and Engineering}\\
+  \affaddr{University at Buffalo}\\
+  \email{\{nvdirien,challen\}@buffalo.edu}
+}
+\hypersetup{
+  pdfinfo={
+    Title={\thetitle},
+    Author={Nick DiRienzo and Geoffrey Challen},
+  },
+}
+\maketitle
+
+\ifdefined\isblue
+\begin{textblock}{1}(6.4,0)
+\noindent\href{http://blue.cse.buffalo.edu}{\includegraphics[width=0.6in]{./figures/logos/blue.jpg}}
+\end{textblock}
+\fi
+
+\input{abstract.tex}
+\input{introduction.tex}
+
+\input{scenarios.tex}
+\input{feasibility.tex}
+\input{survey.tex}
+
+\input{ethics.tex}
+\input{conclusion.tex}
+
+\balance
+{\footnotesize
+\bibliographystyle{abbrv}
+\bibliography{references}
+}
+
+\end{document}

@@ -1,0 +1,117 @@
+\section{Discussion}
+\label{sec-discussion}
+
+Even if feasible and desirable mocking raises a set of unique ethical
+questions related to the relationship between smartphone users and apps. We
+discuss these in this section.
+
+\subsection{Is Mocking Cheating?}
+
+A common reaction by many to mocking is to conflate it with cheating, given
+that it involves misleading apps about a users true nature. This response,
+however, begs the question: what are the rules of the game? Cheating must be
+defined with respect to an agreement, and we are not convinced that users
+have actually agreed to provide an unlimited amount of information about
+their personal lives to smartphone apps. While installing an app does involve
+allowing it to access certain information, we believe that it is reasonable
+for users to expect that apps request information required by the features
+they provide and use it only to provide those features. Unfortunately,
+particularly once the information leaves the device, users quickly lose
+control over how their data is used. Mocking can help return this control.
+
+Others point out that mocking likely violates the terms of service (TOS) that
+app users are frequently required to agree to during the installation
+process. We have not yet performed the detailed examination of common
+smartphone app TOS required to determine whether this is true, but would be
+surprised if TOS agreements could be written in ways preventing users from
+misleading apps. The reason is that there is considerable overlap between
+mocking behaviors and things that users might legitimately do in order to
+alter how smartphone apps perceive them. For example, can an app TOS:
+
+\begin{enumerate}
+
+\item prevent a user from leaving their smartphone home during a night out?
+
+\item require that users keep their smartphones on their person all the time?
+
+\item prevent a user from loaning their device to a friend for a period of
+time?
+
+\item require that a user perform all of their smartphone interaction with
+the same device?
+
+\end{enumerate}
+
+Another common objection is that the current smartphone app ecosystem depends
+on collecting user information in order to subsidize app development, most
+commonly by using personal information to embed targeted advertisements in
+apps, and that users benefit from lower app prices as a result. There are two
+problems with this argument. First, as mentioned earlier smartphone users
+have indicated on surveys that they are not comfortable with this model of
+subsidizing apps through personal data collection. Second, believing that
+this model is really a good deal for smartphone users requires them to trust
+the same companies that are actively trying to monetize this information. A
+sense that they are not receiving adequate compensation for personal
+information may drive expressed discomfort with this business model. In any
+case, because smartphone users have different privacy concerns and
+expectations, not every user should be required to trade their data for
+access to apps.
+
+\subsection{Is Mocking Safe?}
+
+A more serious concern with mocking concerns the effect it might have on
+apps, particularly ones that are health-related. If mocking confuses an app
+designed to remind a user to take a pill, it could have serious health
+consequences. Here it is important to distinguish between the possible
+side-effects of mocking on legitimate apps and the intentional effect of
+mocking on apps that the user is intending to mislead. For example, if a
+doctor asks a patient who wants to get fit to install a pedometer to help
+increase their activity level and the patient chooses to mislead this app
+with mocked activities, then the main problem is not really the mocking
+capability. If the user wants the app to help them become healthier, they
+will cooperate with it; if not, they can always refuse to be monitored
+altogether or find another doctor. Here mocking is not needed to provide
+users with control over their personal information.
+
+We believe that these concerns can be addressed through careful engineering.
+Mocking systems should allow users to configure which apps receive mocked
+to avoid mocking safety- or health-critical apps. It may also be helpful to
+allow apps to issue explicit requests to not be mocked which users could
+approve or ignore as a reminder to adjust mocking settings on a per-app
+basis.
+
+\subsection{What Effect Would Mocking Have?}
+
+Finally, we consider the effect that data mocking would have on smartphone
+data collection and privacy if deployed on a significant number of devices.
+First, we would expect to see an interest among app developers in deploying
+countermeasures to detect or eliminate mocked data. While single-app attacks
+may be defeatable by carefully engineering the mocking system to provide
+consistent false data, a more difficult or impossible set of attacks are
+launched by colluding with other devices or with surrounding infrastructure.
+Interdevice collusion is more feasible, since it could be launched by
+cooperating instances of the same app. Foiling these attacks might require
+mocking cross-device interaction to fool the local app, or simply disabling
+interfaces such as Bluetooth allowing device-to-device communication.
+
+Collusion with the infrastructure would represent a more serious challenge to
+data mocking. As an example, if mobile data networks began reporting
+smartphone user's location directly to app providers apps could use this
+information to pierce the mocking context by comparing the location being
+reported to them by the smartphone to infrastructure-reported location. While
+this type of collusion is the most effective way to shut down our mocking
+approach, it would also represent an unprecedented level of cooperation
+between network providers and the companies selling apps and services. We
+anticipate that these types of agreements would be highly-unattractive to
+smartphone users already concerned about their privacy.
+
+Our ultimate hope is developing objective-driven context mocking is to
+initiate a conversation about what our personal data is worth. Today, because
+smartphone users lack effective tools to control the data they provide to
+apps, they are effectively surrendering their personal information without
+receiving anything in return. So while this data is clearly worth something,
+as evidenced by advertisers scrambling to develop novel location-based
+analytics, as long as we give it away for free we will never know how much.
+If mocking causes apps to begin to be suspicious of the personal data they
+can collect, this may help make legitimate information about users valuable
+again.
