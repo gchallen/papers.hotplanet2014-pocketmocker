@@ -17,7 +17,7 @@ allowing it to access certain information, we believe that it is reasonable
 for users to expect that apps request information required by the features
 they provide and use it only to provide those features. Unfortunately,
 particularly once the information leaves the device, users quickly lose
-control over how their data is used. Mocking can help return this control.
+control over their data.
 
 Others point out that mocking likely violates the terms of service (TOS) that
 app users are frequently required to agree to during the installation
@@ -30,7 +30,10 @@ alter how smartphone apps perceive them. For example, can an app TOS prevent
 a user from leaving their smartphone home during a night out? Require that
 users keep their smartphones on their person all the time? Prevent a user
 from loaning their device to a friend for a period of time? Or require that a
-user perform all of their smartphone interaction with the same device?
+user perform all of their smartphone interaction with the same device? The
+natural answer to these questions seems to be no, but this begs the question
+of whether there is a meaningful difference between actually leaving the
+device at home or bringing it but mocking apps into thinking it is at home.
 
 Another common objection is that the current smartphone app ecosystem depends
 on collecting user information in order to subsidize app development, most
@@ -41,11 +44,10 @@ have indicated on surveys that they are not comfortable with this model of
 subsidizing apps through personal data collection. Second, believing that
 this model is really a good deal for smartphone users requires them to trust
 the same companies that are actively trying to monetize this information. A
-sense that they are not receiving adequate compensation for personal
-information may drive expressed discomfort with this business model. In any
-case, because smartphone users have different privacy concerns and
-expectations, not every user should be required to trade their data for
-access to apps.
+sense that they are not receiving adequate compensation for their information
+may drive user discomfort with this business model. In any case, because
+smartphone users have different privacy concerns and expectations, not every
+user should be required to trade data for service.
 
 \subsection{Is Mocking Safe?}
 
@@ -58,17 +60,14 @@ mocking on apps that the user is intending to mislead. For example, if a
 doctor asks a patient who wants to get fit to install a pedometer to help
 increase their activity level and the patient chooses to mislead this app
 with mocked activities, then the main problem is not really the mocking
-capability. If the user wants the app to help them become healthier, they
-will cooperate with it; if not, they can always refuse to be monitored
-altogether or find another doctor. Here mocking is not needed to provide
-users with control over their personal information.
+feature. If the user wants the app to help them become healthier, they will
+cooperate; if not, they can always refuse to be monitored altogether.
 
-We believe that these concerns can be addressed through careful engineering.
-Mocking systems should allow users to configure which apps receive mocked
-to avoid mocking safety- or health-critical apps. It may also be helpful to
-allow apps to issue explicit requests to not be mocked which users could
-approve or ignore as a reminder to adjust mocking settings on a per-app
-basis.
+We believe that remaining safety concerns can be addressed through careful
+system design. Mocking systems should allow users to configure which apps to
+mock to avoid mocking safety-critical apps. It may also be helpful to allow
+apps to issue explicit requests to not be mocked which users could approve or
+ignore as a reminder to adjust mocking settings on a per-app basis.
 
 \subsection{What Effect Would Mocking Have?}
 
@@ -94,6 +93,8 @@ approach, it would also represent an unprecedented level of cooperation
 between network providers and the companies selling apps and services. We
 anticipate that these types of agreements would be highly-unattractive to
 smartphone users already concerned about their privacy.
+
+\newpage
 
 Our ultimate hope is developing objective-driven context mocking is to
 initiate a conversation about what our personal data is worth. Today, because
