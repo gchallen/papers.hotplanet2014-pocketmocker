@@ -1,10 +1,9 @@
 \documentclass{sig-alternate-10pt}
-\usepackage{url,graphicx,multirow,hyperref,color,calc,ulem,threeparttable,tabularx,booktabs,enumitem,subcaption,balance,amsfonts,comment,framed}
-\usepackage[group-separator={,}]{siunitx}
-\usepackage[font=small,skip=0pt]{caption}
-
+\input{.blue}
+\ifdefined\isblue
+\usepackage{hyperref}
+\usepackage[all]{hypcap}
 \hypersetup{
-  bookmarks=true,
   unicode=true,
   pdftoolbar=true,
   pdfmenubar=true,
@@ -17,7 +16,11 @@
   pdfdisplaydoctitle=true,
   pdfborder={0 0 0},
 }
-\usepackage[all]{hypcap}
+\else
+\fi
+\usepackage{url,graphicx,multirow,color,calc,ulem,threeparttable,tabularx,booktabs,enumitem,subcaption,balance,amsfonts,comment,framed}
+\usepackage[group-separator={,}]{siunitx}
+\usepackage[font=small,skip=0pt]{caption}
 
 \usepackage[absolute]{textpos}
 \setlength{\TPHorizModule}{1in}
@@ -33,5 +36,5 @@
 
 \input{.xxxnote}
 \input{.draft}
-\input{.blue}
 \input{common.tex}
+
