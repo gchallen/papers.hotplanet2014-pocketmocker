@@ -1,5 +1,6 @@
-START = noxxxnote nodraft noblue
+START = noxxxnote nodraft blue
 END = missing
+PYTEX = $(shell pwd)/pytex/
 CLASS = $(PYTEX)/cls/sig-alternate-10pt.cls
 
 all: paper ABSTRACT
